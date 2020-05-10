@@ -142,7 +142,7 @@ void DescriptorToEigenMatrix(
 
 // Define a set of macros to NEON and SSE instructions so we can use the same
 // code further down for both platforms.
-#ifdef ANDROID
+#ifdef __ARM_NEON
 #define VECTOR_SET vdupq_n_u8       // Set a vector from a single uint8.
 #define VECTOR_LOAD(x) vld1q_u8(x)  // Set a vector from a mem location.
 #define VECTOR_TYPE uint8x16_t      // The type of the vector element.
@@ -155,7 +155,7 @@ void DescriptorToEigenMatrix(
 #define VECTOR_AND _mm_and_si128
 // Could use _mm_extract_epi8, but this requires SSE4.1.
 #define VECTOR_EXTRACT(x, i) reinterpret_cast<const char*>(&x)[i]
-#endif  // ANDROID
+#endif  // __ARM_NEON
 
   VECTOR_TYPE mask[8];
   mask[0] = VECTOR_SET((1 << 0));

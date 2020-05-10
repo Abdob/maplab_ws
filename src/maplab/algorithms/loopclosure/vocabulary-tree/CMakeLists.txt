@@ -4,7 +4,13 @@ project(vocabulary_tree)
 find_package(catkin_simple REQUIRED)
 catkin_simple(ALL_DEPS_REQUIRED)
 
-add_definitions(-std=c++11 -mssse3)
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64.*|AARCH64.*|arm64.*|ARM64.*)")
+	add_definitions(-std=c++11 -march=native)
+else()
+	add_definitions(-std=c++11 -mssse3)
+endif()
+
+
 
 set(LIBRARY_NAME ${PROJECT_NAME})
 cs_add_library(${LIBRARY_NAME}

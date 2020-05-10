@@ -7,6 +7,8 @@ catkin_simple()
 set(PROTO_DEFNS proto/matching-based-loopclosure/matching_based_loop_detector.proto)
 PROTOBUF_CATKIN_GENERATE_CPP2("proto" PROTO_SRCS PROTO_HDRS ${PROTO_DEFNS})
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
 set(LIBRARY_NAME ${PROJECT_NAME})
 cs_add_library(${LIBRARY_NAME} src/detector-settings.cc
                                src/matching-based-engine.cc

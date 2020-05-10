@@ -7,6 +7,8 @@ catkin_simple(ALL_DEPS_REQUIRED)
 set(PROTO_DEFNS proto/loop-closure-handler/loop_detector_node.proto)
 PROTOBUF_CATKIN_GENERATE_CPP2("proto" PROTO_SRCS PROTO_HDRS ${PROTO_DEFNS})
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
 #############
 # LIBRARIES #
 #############
