@@ -31,7 +31,6 @@ set(SOURCES
 
 # for ./aslam_cv/aslam_cv_common/include/aslam/common/hamming-inl.h
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mssse3")
 
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64.*|AARCH64.*|arm64.*|ARM64.*)")
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
