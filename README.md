@@ -77,3 +77,13 @@ catkin clean  # Necessary to clean up your workspace as your layout will change.
 catkin config --merge-devel
 
 catkin build maplab -j2
+
+
+
+source ~/maplab_ws/devel/setup.bash
+roscore&
+rosrun rovioli tutorial_euroc save_folder MH_01_easy.bag
+
+
+
+
