@@ -8,7 +8,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   # Disable -Werror on clang.
   add_definitions(-Wextra -Wall -pedantic -DHAVE_OPENCV -std=c++11)
 else()
-  add_definitions(-Wextra -Wall -Werror -pedantic -DHAVE_OPENCV -std=c++0x)
+  add_definitions(-Wextra -Wall -pedantic -DHAVE_OPENCV -std=c++0x)
 endif()
 
 file(GLOB AGAST_SOURCE_FILES  "${PROJECT_SOURCE_DIR}/src/*.cc")

@@ -11,7 +11,7 @@ if ("!${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   # The clang compiler (on osx) is somehow much more strict
   # than the compilers on ubuntu and so this does not seem
   # possible on OSX just yet.
-  add_definitions( -Werror )
+  #  add_definitions( -Werror )
 endif()
 
 #############

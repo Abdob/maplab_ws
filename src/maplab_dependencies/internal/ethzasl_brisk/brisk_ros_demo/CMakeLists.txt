@@ -9,9 +9,9 @@ add_definitions(-msse2 -mssse3 -march=native -Wextra -Wall
                 -std=c++0x -DENABLE_BRISK_TIMING -DTEST_IN_SOURCE
                 -DHAVE_OPENCV)
 
-if (NOT (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
-  add_definitions( -Werror )
-endif()
+	#if (NOT (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
+	#add_definitions( -Werror )
+	#endif()
 
 cs_add_executable(livedemo src/livedemo.cc)
 target_link_libraries(livedemo ${catkin_LIBRARIES})

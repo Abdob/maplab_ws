@@ -12,9 +12,9 @@ include_directories(${CATKIN_DEVEL_PREFIX}/include)
 
 add_definitions(-Wextra -Wall -pedantic)
 
-if (NOT (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
-  add_definitions( -Werror )
-endif()
+#if (NOT (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
+	#add_definitions( -Werror )
+  #endif()
 
 cs_add_library(${PROJECT_NAME} src/brisk-descriptor-extractor.cc
                                src/brisk-feature-detector.cc   
