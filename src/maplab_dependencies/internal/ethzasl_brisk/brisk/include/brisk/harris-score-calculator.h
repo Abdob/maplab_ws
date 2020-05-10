@@ -50,7 +50,24 @@
 
 namespace brisk {
 class HarrisScoreCalculator : public ScoreCalculator<int> {
+ public:
+  // Provide accessor implementations here in order to enable inlining.
+  inline double Score(double u, double v) {
     std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
+    return 0.0;
+  }
+/*
+  inline Base_t::Score_t Score(int u, int v) {
+    std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
+    return Base_t::Score_t(v, u); 
+  }
+*/
+
+
+ protected:
+  // Calculates the Harris scores.
+  virtual void InitializeScores();
+
 };
 }  // namespace brisk
 
