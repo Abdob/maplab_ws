@@ -39,6 +39,8 @@
  */
 
 #include <iostream>
+#include <brisk/harris-score-calculator.h>
+#include <brisk/internal/harris-scores.h>
 
 #ifdef __ARM_NEON
 
@@ -71,8 +73,6 @@ void HarrisScoreCalculator::CornerHarris(const agast::Mat& dxdxSmooth,
 #include <tmmintrin.h>
 #include <stdint.h>
 
-#include <brisk/harris-score-calculator.h>
-#include <brisk/internal/harris-scores.h>
 
 namespace brisk {
 
