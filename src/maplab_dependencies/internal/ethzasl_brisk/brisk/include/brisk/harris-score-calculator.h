@@ -54,11 +54,11 @@ class HarrisScoreCalculator : public ScoreCalculator<int> {
 
   // Provide accessor implementations here in order to enable inlining.
   inline double Score(double u, double v) {
-    cerr << "Function not implemented in ARM" << endl;
+    cerr << "HarrisScoreCalculator: Function not implemented in ARM" << endl;
     return 0.0;
   }
   inline Base_t::Score_t Score(int u, int v) {
-    cerr << "Function not implemented in ARM" << endl;
+    cerr << "HarrisScoreCalculator: Function not implemented in ARM" << endl;
     return _scores.at<int>(v, u);
   }
 
