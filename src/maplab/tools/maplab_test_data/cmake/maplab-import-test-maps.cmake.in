@@ -1,0 +1,9 @@
+SET(MAPLAB_IMPORT_TEST_MAPS "test_maps")
+add_custom_target(${MAPLAB_IMPORT_TEST_MAPS})
+add_custom_command(TARGET ${MAPLAB_IMPORT_TEST_MAPS}
+                   COMMAND rm -rf test_maps &&
+                   cp -r @CMAKE_CURRENT_SOURCE_DIR@/test_maps .)
+
+function(maplab_import_test_maps test_target)
+  add_dependencies(${test_target} ${MAPLAB_IMPORT_TEST_MAPS})
+endfunction()
