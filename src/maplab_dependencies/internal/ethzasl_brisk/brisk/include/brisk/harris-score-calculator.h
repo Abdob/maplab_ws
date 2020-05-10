@@ -58,10 +58,12 @@ class HarrisScoreCalculator : public ScoreCalculator<int> {
     std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
     return 0.0;
   }
+/*
   inline Base_t::Score_t Score(int u, int v) {
     std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
     return Base_t::Score_t(v, u); 
   }
+*/
 
 
  protected:
