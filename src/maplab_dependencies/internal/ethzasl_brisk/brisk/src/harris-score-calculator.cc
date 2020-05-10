@@ -38,6 +38,8 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <iostream>
+
 #ifdef __ARM_NEON
 
 namespace brisk {
