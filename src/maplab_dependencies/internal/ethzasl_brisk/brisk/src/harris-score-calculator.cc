@@ -39,7 +39,31 @@
  */
 
 #ifdef __ARM_NEON
-// Not implemented.
+
+namespace brisk {
+
+void HarrisScoreCalculator::InitializeScores() {
+	std::cerr << "HarrisScoreCalculator:InitializeScores Function not implemented in ARM\n";
+}
+
+void HarrisScoreCalculator::Get2dMaxima(std::vector<PointWithScore>& points,  // NOLINT
+                                        int absoluteThreshold) {
+	std::cerr << "HarrisScoreCalculator:Get2dMaxima Function not implemented in ARM\n";
+}
+
+// X and Y denote the size of the mask.
+void HarrisScoreCalculator::GetCovarEntries(const agast::Mat& src, agast::Mat& dxdx,
+                                            agast::Mat& dydy, agast::Mat& dxdy) {
+	std::cerr << "HarrisScoreCalculator:GetCovarEntries Function not implemented in ARM\n";
+}
+
+void HarrisScoreCalculator::CornerHarris(const agast::Mat& dxdxSmooth,
+                                         const agast::Mat& dydySmooth,
+                                         const agast::Mat& dxdySmooth,
+                                         agast::Mat& dst) {
+	std::cerr << "HarrisScoreCalculator:CornerHarris Function not implemented in ARM\n";
+}
+}  // namespace brisk
 #else
 #include <emmintrin.h>
 #include <tmmintrin.h>
