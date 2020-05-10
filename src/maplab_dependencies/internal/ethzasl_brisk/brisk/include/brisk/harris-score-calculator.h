@@ -50,7 +50,6 @@
 
 namespace brisk {
 class HarrisScoreCalculator : public ScoreCalculator<int> {
- public:
     std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
 };
 }  // namespace brisk
