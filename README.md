@@ -79,9 +79,11 @@ catkin config --merge-devel
 catkin build maplab -j2
 
 
-
+## run demo
 source ~/maplab_ws/devel/setup.bash
+
 roscore&
+
 rosrun rovioli tutorial_euroc save_folder MH_01_easy.bag
 
 
