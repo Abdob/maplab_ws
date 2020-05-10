@@ -46,7 +46,30 @@
 #include <brisk/internal/score-calculator.h>
 
 #ifdef __ARM_NEON
-// Not implemented.
+
+namespace brisk {
+class HarrisScoreCalculator : public ScoreCalculator<int> {
+ public:
+  typedef ScoreCalculator<int> Base_t;
+
+  // Provide accessor implementations here in order to enable inlining.
+  inline double Score(double u, double v) {
+    cerr << "Function not implemented in ARM" << endl;
+    return 0.0;
+  }
+  inline Base_t::Score_t Score(int u, int v) {
+    cerr << "Function not implemented in ARM" << endl;
+    return _scores.at<int>(v, u);
+  }
+
+
+ protected:
+  // Calculates the Harris scores.
+  virtual void InitializeScores();
+
+};
+}  // namespace brisk
+
 #else
 namespace brisk {
 class HarrisScoreCalculator : public ScoreCalculator<int> {
