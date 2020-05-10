@@ -47,18 +47,13 @@ ccache --max-size=10G
 
 ## Clone Repository
 
-export CATKIN_WS=~/maplab_ws
-
 cd ~
 
-git clone --recursive https://github.com/Abdob/maplab_ws
+git clone https://github.com/Abdob/maplab_ws
 
-voxblox: 19634c9cb98efececbd8ae63d17e70d4f4594235
+## Initialize the catkin workspace and build project
 
-
-initialize the catkin workspace and build project
-
-cd $CATKIN_WS
+cd ~/maplab_ws
 
 catkin init
 
@@ -70,7 +65,9 @@ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 catkin config --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
 
-cd $CATKIN_WS
+catkin build maplab -j2
+
+## If already built clean and make again
 
 catkin clean  # Necessary to clean up your workspace as your layout will change.
 
