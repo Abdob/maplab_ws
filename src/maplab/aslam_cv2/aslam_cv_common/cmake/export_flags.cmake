@@ -7,7 +7,7 @@ endif()
 
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64.*|AARCH64.*|arm64.*|ARM64.*)")
   message(STATUS "Setting ARM compilation flags.")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mfpu=neon -march=native")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
 else()
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mssse3")  
 endif()
