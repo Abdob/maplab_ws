@@ -6,7 +6,11 @@ project(brisk)
 find_package(catkin_simple REQUIRED)
 catkin_simple(ALL_DEPS_REQUIRED)
 
-add_definitions("-mssse3 -DHAVE_OPENCV")
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64.*|AARCH64.*|arm64.*|ARM64.*)")
+	add_definitions("-march=native -DHAVE_OPENCV")
+else()
+ 	add_definitions("-mssse3 -DHAVE_OPENCV")
+endif()
 
 include_directories(${CATKIN_DEVEL_PREFIX}/include)
 
@@ -22,7 +26,7 @@ cs_add_library(${PROJECT_NAME} src/brisk-descriptor-extractor.cc
                                src/brisk-opencv.cc
                                src/brisk-scale-space.cc
                                src/brute-force-matcher.cc   
-                               src/camera-aware-feature.cc
+                               #src/camera-aware-feature.cc
                                src/harris-feature-detector.cc
                                src/harris-score-calculator.cc
                                src/harris-score-calculator-float.cc
@@ -31,11 +35,11 @@ cs_add_library(${PROJECT_NAME} src/brisk-descriptor-extractor.cc
                                src/pattern-provider.cc
                                src/vectorized-filters.cc
                                src/test/image-io.cc
-                               src/timer.cc
-                               src/brisk-v1.cc)  
+                               src/timer.cc)
+                               #src/brisk-v1.cc)  
                      
-cs_add_executable(camera src/test-cameras.cc)
-target_link_libraries(camera ${PROJECT_NAME})
+#cs_add_executable(camera src/test-cameras.cc)
+#target_link_libraries(camera ${PROJECT_NAME})
 
 # Testing.
 ##########

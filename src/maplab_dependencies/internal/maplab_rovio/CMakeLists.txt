@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
 project(rovio)
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64.*|AARCH64.*|arm64.*|ARM64.*)")
-       set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 march=native")
+       set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native")
 else()
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -mssse3")
 endif()
