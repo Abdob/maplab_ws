@@ -44,6 +44,7 @@
 #include <agast/wrap-opencv.h>
 #include <brisk/internal/macros.h>
 #include <brisk/internal/score-calculator.h>
+#include <iostream>
 
 #ifdef __ARM_NEON
 
@@ -54,12 +55,12 @@ class HarrisScoreCalculator : public ScoreCalculator<int> {
 
   // Provide accessor implementations here in order to enable inlining.
   inline double Score(double u, double v) {
-    cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
+    std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
     return 0.0;
   }
   inline Base_t::Score_t Score(int u, int v) {
-    cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
-    return _scores.at<int>(v, u);git 
+    std::cerr << "HarrisScoreCalculator: Function not implemented in ARM\n";
+    return Base_t::Score_t(v, u); 
   }
 
 
