@@ -14,7 +14,7 @@ chmod +x ros_install.sh
 
 ./ros_install.sh
 
-## Install required packages
+## Install ROS required packages
 sudo apt install -y software-properties-common
 
 sudo add-apt-repository "deb http://packages.ros.org/ros/ubuntu bionic main"
