@@ -53,6 +53,8 @@ git clone https://github.com/Abdob/maplab_ws
 
 ## Initialize the catkin workspace and build project
 
+mkdir -p ~/maplab_ws/src
+
 cd ~/maplab_ws
 
 catkin init
