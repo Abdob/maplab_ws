@@ -1,5 +1,10 @@
 # maplab_ws | Ubuntu 18 | ARM & Intel
 
+## Clone Repository
+
+cd ~
+
+git clone https://github.com/Abdob/maplab_ws
 
 ## Install of ROS Melodic
 http://wiki.ros.org/Installation/Ubuntu
@@ -51,11 +56,7 @@ source ~/.bashrc && echo $PATH
 ccache --max-size=10G
 
 
-## Clone Repository
 
-cd ~
-
-git clone https://github.com/Abdob/maplab_ws
 
 ## Initialize the catkin workspace and build project
 
