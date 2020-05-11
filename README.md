@@ -55,9 +55,7 @@ catkin config --merge-devel
 
 catkin config --extend /opt/ros/melodic
 
-catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
-
-catkin config --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
 
 catkin build maplab -j2
 
