@@ -69,6 +69,12 @@ catkin build maplab -j2
 
 
 ## run demo
+
+Download MH_01_easy.bag and place it in the maplab_ws directory
+
+http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag
+
+
 source ~/maplab_ws/devel/setup.bash
 
 roscore&
