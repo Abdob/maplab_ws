@@ -7,11 +7,12 @@ cd ~
 git clone https://github.com/Abdob/maplab_ws
 
 ## Install of ROS Melodic
-http://wiki.ros.org/Installation/Ubuntu
 
-or
+cd ~/maplab_ws
 
-run ./ros_install.sh
+chmod +x ros_install.sh
+
+./ros_install.sh
 
 ## Install required packages
 sudo apt install -y software-properties-common
