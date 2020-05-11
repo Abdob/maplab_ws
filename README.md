@@ -61,8 +61,6 @@ ccache --max-size=10G
 
 ## Initialize the catkin workspace and build project
 
-mkdir -p ~/maplab_ws/src
-
 cd ~/maplab_ws
 
 catkin init
