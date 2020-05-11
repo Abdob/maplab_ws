@@ -4,6 +4,10 @@
 ## Install of ROS Melodic
 http://wiki.ros.org/Installation/Ubuntu
 
+or
+
+run ./ros_install.sh
+
 ## Install required packages
 sudo apt install -y software-properties-common
 
