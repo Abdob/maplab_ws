@@ -6,7 +6,7 @@ cd ~
 
 git clone https://github.com/Abdob/maplab_ws
 
-## Install of ROS Melodic
+## Install ROS Melodic
 
 cd ~/maplab_ws
 
