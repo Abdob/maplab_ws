@@ -68,10 +68,7 @@ catkin config --merge-devel
 catkin build maplab -j2
 
 
-<<<<<<< HEAD
 ## Run ROVIOLI in VIO mode
-=======
-## run demo
 
 Download MH_01_easy.bag and place it in the maplab_ws directory
 
