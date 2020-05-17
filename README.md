@@ -68,12 +68,27 @@ catkin config --merge-devel
 catkin build maplab -j2
 
 
-## run demo
+## Run ROVIOLI in VIO mode
 source ~/maplab_ws/devel/setup.bash
 
 roscore&
 
 rosrun rovioli tutorial_euroc save_folder MH_01_easy.bag
+
+## optimize the map
+
+source ~/maplab_ws/devel/setup.bash
+
+rosrun maplab_console maplab_console
+
+create_new_map --map_key my_empty_key
+
+load --map_key my_map_key --map_folder <path/to/the/downloaded/map>
+
+rtl
+
+save
+
 
 
 
