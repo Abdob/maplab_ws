@@ -81,6 +81,9 @@ roscore&
 rosrun rovioli tutorial_euroc save_folder MH_01_easy.bag
 
 ## optimize the map
+using methods a or b
+
+a)
 
 source ~/maplab_ws/devel/setup.bash
 
@@ -92,8 +95,13 @@ load --map_key my_map_key --map_folder save_folder
 
 rtl
 
+b)
 
+source ~/maplab_ws/devel/setup.bash
 
+roscore&
+
+rosrun rovioli tutorial_euroc save_folder_loc_map MH_01_easy.bag --optimize_map_to_localization_map
 
 
 
