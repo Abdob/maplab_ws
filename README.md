@@ -109,9 +109,8 @@ Download MH_03_easy.bag and place it in the maplab_ws directory
 
 http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_02_easy/MH_02_easy.bag
 
-# Make sure that your maplab workspace is sourced!
 
-source ~/maplab_ws/devel/setup.bash
+source ~/maplab_ws/devel/setup.bash # Make sure that your maplab workspace is sourced!
 
 roscore&
 
