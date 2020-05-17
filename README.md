@@ -92,7 +92,6 @@ load --map_key my_map_key --map_folder save_folder
 
 rtl
 
-save
 
 
 
