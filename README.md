@@ -103,5 +103,17 @@ roscore&
 
 rosrun rovioli tutorial_euroc save_folder_loc_map MH_01_easy.bag --optimize_map_to_localization_map
 
+## Run ROVIOLI in LOC mode
 
+Download MH_03_easy.bag and place it in the maplab_ws directory
+
+http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_02_easy/MH_02_easy.bag
+
+# Make sure that your maplab workspace is sourced!
+
+source ~/maplab_ws/devel/setup.bash
+
+roscore&
+
+rosrun rovioli tutorial_euroc_localization save_folder_loc_map_localization save_map_with_localization MH_02_easy.bag
 
