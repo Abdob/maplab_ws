@@ -6,7 +6,7 @@ cd ~
 
 git clone https://github.com/Abdob/maplab_ws
 
-## Install of ROS Melodic
+## Install ROS Melodic
 
 cd ~/maplab_ws
 
@@ -14,7 +14,7 @@ chmod +x ros_install.sh
 
 ./ros_install.sh
 
-## Install required packages
+## Install ROS required packages
 sudo apt install -y software-properties-common
 
 sudo add-apt-repository "deb http://packages.ros.org/ros/ubuntu bionic main"
@@ -68,7 +68,17 @@ catkin config --merge-devel
 catkin build maplab -j2
 
 
+<<<<<<< HEAD
 ## Run ROVIOLI in VIO mode
+=======
+## run demo
+
+Download MH_01_easy.bag and place it in the maplab_ws directory
+
+http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag
+
+
+>>>>>>> 1aa1c34033b01c81ff2e3632cfde7783dc30856b
 source ~/maplab_ws/devel/setup.bash
 
 roscore&
