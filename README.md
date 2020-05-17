@@ -77,8 +77,6 @@ Download MH_01_easy.bag and place it in the maplab_ws directory
 
 http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.bag
 
-
->>>>>>> 1aa1c34033b01c81ff2e3632cfde7783dc30856b
 source ~/maplab_ws/devel/setup.bash
 
 roscore&
@@ -93,7 +91,7 @@ rosrun maplab_console maplab_console
 
 create_new_map --map_key my_empty_key
 
-load --map_key my_map_key --map_folder <path/to/the/downloaded/map>
+load --map_key my_map_key --map_folder save_folder
 
 rtl
 
